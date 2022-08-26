@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'crud',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => 'yusufsa_sij2_',
+	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
