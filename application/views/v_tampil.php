@@ -10,6 +10,16 @@
 		  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 	<title>Read</title>
+	<script>
+		function deleteConfirm(s) {
+			if(confirm('Yakin ingin menghapus ?')){
+				window.location.href=s;
+			}
+			else{
+				return false;
+			}
+		}
+	</script>
 </head>
 <body>
 <center><h1>Membuat CRUD (Create, Read, Update, Delete) dengan CodeIgniter 3</h1></center>
@@ -48,7 +58,7 @@
 			<td><?php echo $u['perkerjaan'] ?></td>
 			<td>
 				<a class="btn btn-primary" href="<?php echo site_url('update/' . $u['id']); ?>">Ubah Data (Update)</a>
-				<a class="btn btn-danger" href="<?php echo site_url('delete/' . $u['id']); ?>">Hapus Data (Delete)</a>
+				<button class="btn btn-danger" onclick="deleteConfirm('<?php echo site_url('delete/' . $u['id']); ?>')">Hapus Data (Delete)</button>
 			</td>
 		</tr>
 	<?php } ?>
