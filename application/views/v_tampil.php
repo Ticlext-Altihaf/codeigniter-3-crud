@@ -42,6 +42,14 @@
     <?php } ?>
 </table>
 </body>
+<footer style="
+background-color: #f5f5f5;
+text-align: center;
+padding: 20px;
+">
+	<p>Not-Copyright; 2022 - <?php echo date('Y'); ?> <a href="https://github.com/Ticlext-Altihaf/codeigniter-3-crud">github.com/Ticlext-Altihaf/codeigniter-3-crud</a></p>
+
+</footer>
 </html>
 
 
