@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-29T06:27:55.588Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="gzSrhG9vNqv8fazaXfxP" version="20.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-29T06:28:26.432Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="4N5UoB79lOBN54fErGti" version="20.2.7" type="github">
   <diagram id="cLFzMHlZY-w-j3A8pgei" name="Page-1">
     <mxGraphModel dx="813" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -25,6 +25,15 @@
         <mxCell id="1fBW9ayHnFDUyYuJ9Qg0-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1fBW9ayHnFDUyYuJ9Qg0-10" target="1fBW9ayHnFDUyYuJ9Qg0-14">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="220" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="370" />
+              <mxPoint x="200" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1fBW9ayHnFDUyYuJ9Qg0-18" value="Menulis Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1fBW9ayHnFDUyYuJ9Qg0-13">
+          <mxGeometry x="0.2647" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="1fBW9ayHnFDUyYuJ9Qg0-10" value="Edit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
