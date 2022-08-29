@@ -42,7 +42,7 @@ class Crud extends CI_Controller {
 
 		$datas = array();
 		$i = $this->Users_model->count();
-		$data_count = 10 + $i;
+		$data_count = rand(1,50) + $i;
 		for($i = $i; $i < $data_count; $i++){
 			$datas[$i] = array(
 				'nama' => 'nama-'.$i,

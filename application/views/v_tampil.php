@@ -4,7 +4,7 @@
     <title>Read</title>
 </head>
 <body>
-<center><h1>Membuat CRUD (Create, Read, Update, Delete) dengan CodeIgniter </h1></center>
+<center><h1>Membuat CRUD (Create, Read, Update, Delete) dengan CodeIgniter 3</h1></center>
 <center>
 	<div>
 		<?php echo anchor('create','Tambah Data (Create)'); ?>
