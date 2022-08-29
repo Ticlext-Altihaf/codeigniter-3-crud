@@ -53,6 +53,8 @@ $route['default_controller'] = 'Crud/read';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['create/automatic'] = 'Crud/create_automatic';
 $route['create'] = 'Crud/create';
 $route['update/(:any)'] = 'Crud/update/$1';
 $route['delete/(:any)'] = 'Crud/delete/$1';
+$route['delete-all'] = 'Crud/delete_all';

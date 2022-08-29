@@ -20,6 +20,19 @@ class Users_model extends CI_Model
 		);
 		return $this->db->insert('users', $data);
 	}
+
+	public function createBatch($users){
+		$this->db->insert_batch('users', $users);
+	}
+
+	public function count(){
+		return $this->db->count_all('users');
+	}
+
+	public function delete_all(){
+		$this->db->empty_table('users');
+	}
+
 	public function read_users($id = FALSE)
 	{
 		if ($id === FALSE) {

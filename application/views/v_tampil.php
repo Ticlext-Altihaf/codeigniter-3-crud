@@ -5,7 +5,17 @@
 </head>
 <body>
 <center><h1>Membuat CRUD (Create, Read, Update, Delete) dengan CodeIgniter </h1></center>
-<center><?php echo anchor('create','Tambah Data (Create)'); ?></center>
+<center>
+	<div>
+		<?php echo anchor('create','Tambah Data (Create)'); ?>
+		<br>
+		<?php echo anchor('create/automatic','Tambah Data Otomatis (Create)'); ?>
+		<br>
+		<?php echo anchor('delete-all','Hapus Semua Data (Delete)'); ?>
+		<br>
+		<p>Jumlah Data: <?php echo $count; ?></p>
+	</div>
+</center>
 <table style="margin:20px auto;" border="1">
     <tr>
         <th>No</th>
