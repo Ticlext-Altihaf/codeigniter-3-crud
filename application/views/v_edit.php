@@ -150,12 +150,7 @@
 <div class="container">
 	<!-- code here -->
 	<div class="card">
-		<div class="card-image">
-			<h2 class="card-heading">
-				Get started
-				<small>Let us edit your account</small>
-			</h2>
-		</div>
+
 		<form class="card-form" method="post">
 			<div class="input">
 				<input type="text" class="input-field" value="<?php echo $nama ?>" name="nama" required>
