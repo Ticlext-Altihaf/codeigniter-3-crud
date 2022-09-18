@@ -49,12 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Crud/read';
+$route['default_controller'] = 'Crud/crud';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['create/automatic'] = 'Crud/create_automatic';
-$route['create'] = 'Crud/create';
-$route['update/(:any)'] = 'Crud/update/$1';
-$route['delete/(:any)'] = 'Crud/delete/$1';
-$route['delete-all'] = 'Crud/delete_all';
+$route['api/v1/(.*)'] = 'API/index';
+$route['(:any)'] = 'Crud/records/$1';
