@@ -4,19 +4,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  *
  * @property MahasiswaModel $MahasiswaModel
+ * @property MataKuliahModel $MataKuliahModel
  */
-class Crud extends CI_Controller {
+class Main extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('MahasiswaModel');
+		$this->load->model('MataKuliahModel');
 		$this->load->helper('url_helper');
 	}
 
 	public function read(){
+		$offset = $this->input->get('offset');
+		$limit = $this->input->get('limit');
+		if(!$offset) $offset = 0;
+		if(!$limit) $limit = 15;
 		$data = array();
-		$data['users'] = $this->MahasiswaModel->read_users();
+		$data['mahasiswa'] = $this->MahasiswaModel->read();
 		$data['count'] = $this->Users_model->count();
 		$this->load->view('v_tampil', $data);
 	}
