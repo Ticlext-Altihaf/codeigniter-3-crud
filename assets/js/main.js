@@ -15,6 +15,17 @@ $(document).ready(function () {
 			});
 		}
 	});
+
+	//intercept modal
+	$("#deleteTableModal").on("show.bs.modal", function (e) {
+		//check if checkbox any is checked
+		if (!checkbox.is(":checked")) {
+			//abort
+			e.preventDefault();
+			//trigger alert modal
+			$("#alertModal").modal("show");
+		}
+	});
 	checkbox.click(function () {
 		if (!this.checked) {
 			$("#selectAll").prop("checked", false);
