@@ -16,14 +16,26 @@ $(document).ready(function () {
 		}
 	});
 
-	//intercept modal
-	$("#deleteTableModal").on("show.bs.modal", function (e) {
+
+	//delete button logic
+	$("#deleteTableButton").click(function () {
 		//check if checkbox any is checked
 		if (!checkbox.is(":checked")) {
-			//abort
-			e.preventDefault();
 			//trigger alert modal
+			$("#alert-modal-title").html("Alert");
+			$("#alert-modal-body").html("Please select at least one record to delete.");
 			$("#alertModal").modal("show");
+		}else{
+			//get list of checked checkbox with value name
+			const checkedCheckbox = [];
+			checkbox.each(function () {
+				if (this.checked) {
+					checkedCheckbox.push($(this).closest("tr").find("name").text());
+				}
+			});
+			$("#deleteTableModal-Body").html("Are you sure you want to delete " + checkedCheckbox.length + " record(s)?");
+			$("#deleteTableModal").modal("show");
+
 		}
 	});
 	checkbox.click(function () {

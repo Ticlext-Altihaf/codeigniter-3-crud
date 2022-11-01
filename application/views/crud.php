@@ -67,7 +67,7 @@
 				<div class="col-sm-6">
 					<a href="#addTableModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
 						<span>Add New Table</span></a>
-					<a href="#deleteTableModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>
+					<a id="deleteTableButton" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>
 						<span>Delete</span></a>
 				</div>
 			</div>
@@ -91,14 +91,14 @@
 			<?php
 			foreach ($tables as $table) {
 				?>
-				<tr>
+				<tr class="item">
 					<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
 							</span>
 					</td>
-					<td><a href="<?php echo $table['name'] ?>"><?php echo $table['name'] ?></a></td>
+					<td class="name"><a href="<?php echo $table['name'] ?>"><?php echo $table['name'] ?></a></td>
 					<td><?php echo count($table['fields']) ?></td>
 					<td><?php echo $table['count'] ?></td>
 					<td>
@@ -200,7 +200,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
-					<p>Are you sure you want to delete these Records?</p>
+					<p id="deleteTableModal-Body">Are you sure you want to delete these Records?</p>
 					<p class="text-warning"><small>This action cannot be undone.</small></p>
 				</div>
 				<div class="modal-footer">
@@ -212,6 +212,23 @@
 	</div>
 </div>
 <!-- Alert No Choice Modal HTML -->
-
+<div id="alertModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">
+					<h4 class="modal-title" id="alert-modal-title">Warning</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body" id="alert-modal-body">
+					<p>Warning</p>
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Ok">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 </body>
 </html>
